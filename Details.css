@@ -1,0 +1,197 @@
+body {
+   background-image: url(Turtle-hachery-website/src/assets/images/pexels-jess-loiterton-5007436.jpg); 
+    background-size: cover; 
+   background-repeat: no-repeat;
+   }
+nav {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: rgba(167, 175, 184, 0.3);
+   height: 30%;
+   padding-top: 50px;
+   padding-bottom: 50px;
+   margin-bottom: 15px;
+
+}
+
+nav ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   position: relative;
+   top: 20%;
+}
+
+nav ul li {
+   margin: 10px;
+}
+
+nav ul li:last-child {
+   margin-right: 0;
+}
+
+nav ul li a {
+   text-decoration: none;
+   color: #fff;
+   font-size: 20px;
+}
+
+nav ul li a:hover {
+   text-decoration: none;
+   color: #fff;
+   font-size: 18px;
+   opacity: 50%;
+}
+
+nav h3{
+  text-decoration: none;
+  color: #fff;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 10%;
+}
+@media only screen and (max-width: 600px) {
+   nav {
+       position: relative;
+       height: auto;
+   }
+
+   nav ul {
+       flex-direction: column;
+       align-items: center;
+   }
+
+   nav ul li {
+       margin: 10px 0;
+   }}
+   
+   
+   .error-message {
+      color: red;
+      font-size: 14px;
+      display: none;
+  }
+  
+   
+   .mainContent{
+      margin-top: 25%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-evenly;
+   }
+   .container {
+      width: 500px;
+      background-color: #d1dae0;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      opacity: 0.9; 
+   height: 40%; 
+   margin-bottom: 15px;  
+
+  }
+  label {
+   display: block;
+   margin-bottom: 6px;
+   font-weight: bold;
+   color: #555555;
+}
+
+input[type="text"] {
+   padding: 8px;
+   border: 1px solid #dddddd;
+   border-radius: 6px;
+   font-size: 14px;
+   color: #555555;
+}  
+input[type="tel"] {
+padding: 8px;
+border: 1px solid #dddddd;
+border-radius: 6px;
+font-size: 14px;
+color: #555555;
+}  
+input[type="email"] {
+padding: 8px;
+border: 1px solid #dddddd;
+border-radius: 6px;
+font-size: 14px;
+color: #555555;
+}  
+input[type="gender"] {
+padding: 8px;
+border: 1px solid #dddddd;
+border-radius: 6px;
+font-size: 14px;
+color: #555555;
+}  
+
+button[type="submit"] {
+width: 20%;
+padding: 8px;
+background-color: #a3bac9;
+color: #ffffff;
+border: none;
+border-radius: 6px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+background-color: #2980b9;
+} 
+
+   .summary {
+      background-color: #f9f9f9;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      width: 500px;
+      opacity: 0.9; 
+   }
+   
+   .summary h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+   }
+   
+   .table1 {
+      width: 100%;
+      border-collapse: collapse;
+   }
+   
+   .table1 tr:not(:last-child) {
+      border-bottom: 1px solid #ddd;
+   }
+   
+   .table1 td {
+      padding: 10px;
+      text-align: left;
+   }
+   
+   .table1 td:first-child {
+      font-weight: bold;
+      color: #333;
+   }
+   
+   .tablehead1 {
+      background-color: #f2f2f2;
+      font-weight: bold;
+   }
+   
+   #DetailsButton{
+      white-space: nowrap  ;
+   width: 200px;
+   position: relative;
+   top: 10px;
+}

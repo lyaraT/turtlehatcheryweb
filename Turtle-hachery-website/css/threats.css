@@ -1,0 +1,193 @@
+* {
+   margin: 0;
+   padding: 0;
+ }
+ 
+ header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 9999;
+ }
+ 
+nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+  }
+nav ul {
+	list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+ 
+}
+
+nav ul li {
+	margin: 10px;
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+}
+nav ul li a:hover {
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+   opacity: 50%;
+}
+ @media screen and (max-width: 768px) {
+   .navbar li {
+     margin: 5px;
+   }
+ }
+ .maindiv {
+   background-color: black;
+   height: 2400px;
+   width: 1518px;
+ }
+ .mainpic {
+   width: 800px;
+   height: 560px;
+   position: absolute;
+   left: 360px;
+   top: 230px;
+ }
+ .MAINh {
+   color: red;
+   position: absolute;
+   top: 120px;
+   left: 660px;
+ }
+ .p1 {
+   color: white;
+   position: absolute;
+   top: 820px;
+   font-size: 17px;
+   left: 380px;
+ }
+ .h2-1 {
+   color: red;
+   position: absolute;
+   top: 980px;
+   left: 360px;
+ }
+ 
+ .p1-2 {
+   color: #fff;
+   position: absolute;
+   top: 1020px;
+   left: 360px;
+   font-size: 17px;
+ }
+ .h2-2 {
+   color: red;
+   position: absolute;
+   top: 1230px;
+   left: 360px;
+ }
+ .p1-3 {
+   color: #fff;
+   position: absolute;
+   top: 1280px;
+   left: 360px;
+   font-size: 17px;
+ }
+ .h2-3 {
+   color: red;
+   position: absolute;
+   top: 1320px;
+   left: 360px;
+ }
+ .p1-4 {
+   color: #fff;
+   position: absolute;
+   top: 1500px;
+   left: 360px;
+   font-size: 17px;
+ }
+ .h2-3 {
+   color: red;
+   position: absolute;
+   top: 1450px;
+   left: 360px;
+ }
+ .h2-4 {
+   color: red;
+   position: absolute;
+   top: 1700px;
+   left: 360px;
+ }
+ .p1-5 {
+   color: #fff;
+   position: absolute;
+   top: 1750px;
+   left: 360px;
+   font-size: 17px;
+ }
+ 
+ .pic1{
+   width: 200px;
+   height: 150px;
+   position: absolute;
+   top: 1000px;
+   left: 1230px;
+   border-radius: 3px;
+ }
+ .pic2{
+   width: 200px;
+   height: 150px;
+   position: absolute;
+   top: 1250px;
+   left: 1230px;
+   border-radius: 3px;
+ }
+ .pic3{
+   width: 200px;
+   height: 150px;
+   position: absolute;
+   top: 1470px;
+   left: 1230px;
+   border-radius: 3px;
+ }
+ .pic4{
+   width: 200px;
+   height: 150px;
+   position: absolute;
+   top: 1720px;
+   left: 1230px;
+   border-radius: 3px;
+ }
+ .homeFooter {
+   position: relative;
+   top: 170px;
+   left: 360px;
+   margin-left: 20px;
+   color: #fff;
+ }
+ .forestfooter {
+   height: 300px;
+   width: 1510px;
+   position: absolute;
+   left: 0px;
+   top: 2100px;
+   color: #fff;
+ }
+ .copyrights {
+   position: absolute;
+   top: 250px;
+   left: 680px;
+   color: white;
+ }
+ 
+ 

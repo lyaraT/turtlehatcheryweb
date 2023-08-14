@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <script src="Turtle-hachery-website\JavaScript\Tickets.js"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="Details.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/js/intlTelInput.min.js"></script>
+</head>
+<body>
+    
+
+
+    <nav>
+        <h3>Buy tickets</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+             <li><a href="Tickets.html">Tickets</a></li>
+             <li><a href="Details.html">Details</a></li>
+             <li><a href="payments.html">Payments</a></li>
+             <li><a href="confirmation.html">Confirmation</a></li>
+             
+        </ul>
+    </nav>
+
+      
+     <div class="mainContent">
+     
+        <div class="container" x-data="checkout" x-init="init">
+            <form x-on:submit.prevent="submitForm">
+                <div>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" name="fullName" id="fullName" x-model="guest.fullName" required>
+                    <span x-show="!guest.fullName" class="error-message">Full Name is required</span>
+                </div>
+                <div>
+                    <label for="mobile">Mobile</label>
+                    <input type="tel" name="mobile" id="mobile" x-model="guest.mobile" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" x-model="guest.email" required>
+                    <span x-show="!isValidEmail(guest.email)" class="error-message">Invalid Email</span>
+                </div>
+                <div>
+                    <label for="confirmEmail">Confirm Email</label>
+                    <input type="email" name="confirmEmail" id="confirmEmail" x-model="guest.confirmEmail" required>
+                    <span x-show="!isValidEmail(guest.confirmEmail)" class="error-message">Invalid Email</span>
+                </div>
+                <div>
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender" x-model="guest.gender" required>
+                        <option value="" disabled>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div>
+                    <button id="DetailsButton" type="submit" x-on:click="goToPayment" x-bind:disabled="!isFormValid">Continue with Purchase</button>
+                </div>
+            </form>
+        </div>
+        
+
+        <div class="summary table" x-data="checkout">
+            <h2>Order Summary</h2>
+            <Table class="table1">
+                <tr>
+                    <td>Date</td>
+                    <td><div x-text="SavedDate"></td>
+                </tr>
+                <tr>
+                    <td>Selected Times</td>
+                    <td>
+                        <template x-for="timeIndex in SavedTimeslot">
+                            <div x-text="openTimes[timeIndex].title"></div>
+                        </template>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td x-text="TotalDuration + ' Hrs' "></td>
+                </tr>
+                <tr class="tablehead1">
+                    <td>Tickets</td>
+                    <td>Charges</td>
+                </tr>
+                <template x-for="guestIndex in ticketTypes">
+                    <tr>   
+                        <td><div x-text="guestIndex.name"></div></td>
+                        <td><div x-text="'$'+guestIndex.total"></div></td>  
+                    </tr>
+                </template>
+                <tr>
+                    <td>Total Payable</td>
+                    <td x-text="'$'+TotalPayable"></td>
+                </tr>
+            </Table>
+         </div>
+     </div>
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+        <script src="checkout.js"></script>
+        
+ 
+</body>
+</html>

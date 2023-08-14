@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets</title>
+    <script src="Turtle-hachery-website\JavaScript\Tickets.js"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="ticket.css"/>
+
+</head>
+
+<body>
+
+<nav>
+    <h3>Buy tickets</h3>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="Tickets.html">Tickets</a></li>
+        <li><a href="Details.html">Details</a></li>
+        <li><a href="payments.html">Payments</a></li>
+        <li><a href="confirmation.html">Confirmation</a></li>
+
+    </ul>
+</nav>
+
+    <div  class="mainContent"  x-data="tickets">
+
+        <div class="container">
+
+            <div class="calender">
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date" x-model="date">
+            </div>
+
+            <div x-show="date" class="time-slots-container">
+                <label for="timeslot">Time Slot</label>
+                <div>
+                    <button class="show-hide-button" x-on:click="showTimes = !showTimes">
+                        <span x-show="!showTimes">Show Times</span>
+                        <span x-show="showTimes">Hide Times</span>
+                    </button>
+                    <ul class="time-slots-list">
+                        <template x-for="(timeSlot, index) in openTimes" :key="index">
+                            <li
+                                    class="time-slot"
+                                    :class="{ 'is-peak': timeSlot.isPeak }"
+                                    x-show="showTimes || selectedTimeSlots.includes(index)"
+                                    x-on:click="selectTimeSlot(index)"
+                            >
+                                <label :for="timeSlot.title" x-text="timeSlot.title" style="cursor: pointer;"></label>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </div>
+
+            <div x-show="selectedTimeSlots.length" class="ticket-type-container">
+                <label for="ticketType">Ticket Type</label>
+                <template x-for="(ticketType, index) in ticketTypes" :key="index">
+                    <div class="ticket-type-item">
+                        <label :for="ticketType.name" class="ticket-type-label" x-text="ticketType.name"></label>
+                        <div class="counter-button">
+                            <button type="button"
+                                    x-on:click="ticketTypes[index].count = (ticketTypes[index].count - 1 > 0 ? ticketTypes[index].count - 1 : 0); calculate(ticketTypes[index])">
+                                -
+                            </button>
+                            <input type="number" x-model="ticketTypes[index].count"/>
+                            <button x-on:click="ticketTypes[index].count = ticketTypes[index].count + 1; calculate(ticketTypes[index])">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+            <div class="charges-table">
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Charge per one Normal hour</th>
+                        <th>Charge per one Peak hour</th>
+                    </tr>
+                    <tr>
+                        <td>Foreigner Adult</td>
+                        <td>$10</td>
+                        <td>$13</td>
+                    </tr>
+                    <tr>
+                        <td>Foreigner Child</td>
+                        <td>$5</td>
+                        <td>$8</td>
+                    </tr>
+                    <tr>
+                        <td>SL Adult</td>
+                        <td>$4</td>
+                        <td>$6</td>
+                    </tr>
+                    <tr>
+                        <td>SL Child</td>
+                        <td>$2</td>
+                        <td>$3</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="summary table">
+            <h2>Order Summary</h2>
+            <Table class="table1">
+                <tr>
+                    <td>Date</td>
+                    <td>
+                        <div x-text="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Selected Times</td>
+                    <td>
+                        <template x-for="timeIndex in selectedTimeSlots">
+                            <div x-text="openTimes[timeIndex].title"></div>
+                        </template>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td x-text="selectedTimeSlots.length + ' Hrs' "></td>
+                </tr>
+                <tr class="tablehead1">
+                    <td>Tickets</td>
+                    <td>Charges</td>
+                </tr>
+                <template x-for="guestIndex in ticketTypes">
+                    <tr>
+                        <td>
+                            <div x-text="guestIndex.name"></div>
+                        </td>
+                        <td>
+                            <div x-text="'$'+guestIndex.total"></div>
+                        </td>
+                    </tr>
+                </template>
+                <tr>
+                    <td>Total Payable</td>
+                    <td x-text="'$'+totalCalc(ticketTypes)"></td>
+                </tr>
+            </Table>
+            <button class="continuePurchaseButton" id="goto-button" x-on:click="gotoCheckout">Continue with Purchase</button>
+        </div>
+
+</div>
+</body>
+
+</html>

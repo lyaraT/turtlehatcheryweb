@@ -1,0 +1,189 @@
+#video-section{
+	margin-bottom: 80px;
+}
+.video-container {
+ position: relative;
+ width: 100%;
+ height: 100vh;
+}
+
+.video-heading{
+position:absolute;
+top: 35%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size:70px;
+color: white;
+text-align: center;
+}
+
+video {
+ object-fit: cover;
+ width: 100%;
+ height: 100%;
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+  }
+nav ul {
+	list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+ 
+}
+
+nav ul li {
+	margin: 10px;
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+}
+nav ul li a:hover {
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+   opacity: 50%;
+}
+
+@media screen and (max-width: 768px) {
+ .navbar li {
+	margin: 5px;
+ }
+}
+
+
+.hatchery-layout{
+
+display: flex;
+padding: 30px;
+}
+
+.infomation-image{
+	flex: 1;
+
+}
+
+.donation-image{
+	width: 500px;
+	height: 400px;
+	position:relative;
+	left: 140px;
+
+}
+#PurchaseButton{
+	position: absolute;
+right: 600px;
+padding: 10px;
+border-radius: 5px;
+   background-color:white;
+}
+#PurchaseButton:hover{
+background-color: #e6e6e6;
+}
+.button{
+	padding: 8px;
+
+}
+
+.content{
+	flex: 1;
+	margin-left: 15px
+}
+
+#hatchery-infomation{
+	margin-bottom: 80px;
+}
+.div1{
+display: flex;
+padding: 30px;
+align-content: center;
+}
+
+.div2{
+	flex: 1;
+	padding: 15px;
+	box-shadow: 0 4px 10px rgba(151, 79, 79, 0.1);
+}
+.heading-location{
+	
+	text-align: center;
+}
+.paragraph-content{
+	text-align: center;
+
+}
+.pic2{
+	height: 400px;
+	width: 250px;
+}
+.map-div{
+	flex: 1;
+	margin-left: 30px;
+	align-items: center;
+}
+
+.map1{
+	width: 80%;
+}
+
+#location-information{
+	margin-bottom: 80px;
+}
+
+
+#hatchery-features{
+	margin-bottom: 80px;
+}
+
+.feature-layout{
+	display: flex;
+	padding: 30px;
+}
+
+.feature-image{
+	flex: 1;
+}
+
+.feature-content{
+	flex: 1;
+	margin-left: 15px;
+}
+
+.pic2{
+	width: 100%;
+	height: 550px;
+}
+.homeFooter{
+	position: relative;
+	top: 170px;
+	left: 360px;
+	margin-left: 20px;
+  }
+ .forestfooter{
+ height: 300px;
+ width: 1510px;
+ position: absolute;
+ left: 0px;
+ top:2800px
+ 
+ 
+ ;
+ }
+ .copyrights{
+	position: absolute;
+	top: 250px;
+ left: 680px;}

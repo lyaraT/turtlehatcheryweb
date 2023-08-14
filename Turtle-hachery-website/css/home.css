@@ -1,0 +1,321 @@
+  #video-section{
+     margin-bottom: 80px;
+ }
+ .video-container {
+   position: relative;
+   width: 100%;
+   height: auto;
+ }
+ 
+ .video-heading{
+  position:absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:70px;
+  color: white;
+  text-align: center;
+ }
+ 
+ video {
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ 
+ nav {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.3);
+   }
+ nav ul {
+   list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  
+ }
+ 
+ nav ul li {
+   margin: 10px;
+ }
+ 
+ nav ul li:last-child {
+   margin-right: 0;
+ }
+ 
+ nav ul li a {
+   text-decoration: none;
+   color: #fff;
+   font-size: 20px;
+ }
+ nav ul li a:hover {
+   text-decoration: none;
+   color: #fff;
+   font-size: 18px;
+    opacity: 50%;
+ }
+ 
+ @media screen and (max-width: 768px) {
+   .navbar li {
+     margin: 5px;
+   }
+ }
+ 
+ 
+ 
+ 
+ /* feature section */
+ 
+ #feature-section{
+     margin-bottom: 80px;
+     /* increase padding to center cards more */
+     padding: 30px;
+ }
+ 
+ .card-container {
+     display: flex;
+     height: 400px;
+     
+   }
+   .donationpic{
+     height: 100%;
+     width: 100%;
+    
+     
+ 
+ 
+   }
+   .card {
+     flex: 2;
+     padding: 0;
+     /* change card color */
+     background-color: #f0f0f0;
+     margin: 10px;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     margin-top: 70px;
+     transition: flex-grow 0.6s, transform 0.6s;
+     position: relative;
+     height: 500px;
+   }
+
+   .card-heading{
+    position: absolute;
+color: white;
+    top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   }
+ 
+   .card:hover {
+     flex-grow: 2;
+     transform: scale(1.1);
+   }
+ 
+   .card:active {
+     opacity: 0.6;
+   }
+   
+   .card h2 {
+     font-size: 30px;
+     margin-bottom: 10px;
+   }
+   
+   .card p {
+     font-size: 16px;
+   }
+ 
+   .main-card {
+     flex: 1;
+     padding: 20px;
+     /* change card color */
+     background-color: #f0f0f0;
+     margin: 10px;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(151, 79, 79, 0.1);
+     transition: flex-grow 0.6s, transform 0.6s;
+     height: 700px;
+     
+   }
+   
+   .main-card:hover {
+     flex-grow: 2;
+     transform: scale(1.1);
+   }
+ 
+   .main-card:active {
+     opacity: 0.6;
+   }
+ 
+   .main-card  h2 {
+     font-size: 40px;
+     margin-bottom: 10px;
+   }
+   
+   .main-card  p {
+     font-size: 16px;
+   }
+ 
+ 
+   /* hatchery section */
+ 
+   #hatchery-section{
+     padding: 30px;
+     margin-bottom: 80px;
+   }
+ 
+   .hatchery-section-heading {
+     text-align: center;
+     
+   }
+   
+   .line {
+     height: 1px;
+     background-color: #000;
+     width: 40%;
+     display: inline-block;
+     position: relative;
+     top: 150px;
+   }
+   .hatchery-title{
+     position: relative;
+     top: 150px;
+     font-size: 30px;
+   }
+   .hatchery-title {
+     display: inline-block;
+     background-color: #fff;
+     padding: 0 10px;
+     margin-bottom: 80px;
+   }
+ 
+ 
+   .hatchery-container {
+ 
+     display: flex;
+     justify-content: space-between;
+     position: absolute;
+     top: 1800px;
+     
+   }
+   
+   .hatchery-card {
+     flex: 1;
+     background-color: #f0f0f0;
+     margin: 10px;
+     border-radius: 10px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     height: 700px;
+     position: relative;
+     font-size: 10px;
+   }
+   .hatchery-card h2{
+     font-size: 20px;
+   }
+   #listturtles{
+     font-size: 14px;
+     position: absolute;
+     left:150px;
+     top: 500px;
+   }
+   #listbentota{
+     font-size: 14px;
+     position: absolute;
+     left:180px;
+     top: 500px;
+   }
+   .read-more{
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ 
+   }
+   
+   .carhatchery-cardd h2 {
+     font-size: 20px;
+     margin-bottom: 10px;
+   }
+   
+   .hatchery-card img {
+     width: 100%;
+     max-height: 200px;
+     object-fit: cover;
+     border-radius: 5px;
+     margin-bottom: 10px;
+   }
+   
+   .hatchery-card p {
+     font-size: 16px;
+     margin-bottom: 10px;
+   }
+   
+   .hatchery-card .read-more {
+     text-decoration: none;
+     background-color: #007bff;
+     color: #fff;
+     padding: 10px 20px;
+     border-radius: 5px;
+     font-size: 14px;
+   }
+   .homeFooter{
+	position: relative;
+	top: 170px;
+	left: 360px;
+	margin-left: 20px;
+ }
+.forestfooter{
+height: 300px;
+width: 1510px;
+position: absolute;
+left: 0px;
+top:2700px
+
+
+;
+}
+.copyrights{
+	position: absolute;
+	top: 250px;
+left: 680px;}
+ 
+ 
+/* Styles for screens with a maximum width of 767px */
+@media screen and (max-width: 767px) {
+  
+  nav ul {
+    text-align: center;
+  }
+  
+  nav ul li a {
+    font-size: 14px;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 90%;
+    margin: 10px;
+  }
+  
+  .hatchery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hatchery-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}

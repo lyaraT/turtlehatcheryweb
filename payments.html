@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments</title>
+    <script src="Details.css"></script>
+    <script src="Turtle-hachery-website\JavaScript\Tickets.js"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="payment.css" />
+    
+</head>
+
+<body>
+
+    <nav>
+        <h3>Buy tickets</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+             <li><a href="Tickets.html">Tickets</a></li>
+             <li><a href="Details.html">Details</a></li>
+             <li><a href="payments.html">Payments</a></li>
+             <li><a href="confirmation.html">Confirmation</a></li>
+             
+        </ul>
+    </nav>
+      </section>
+
+
+      <div class="mainContent">
+
+     <div class="container" x-data="checkout">
+      <form class="payment-form">
+          <h2>Card Details</h2>
+          <div class="form-group">
+              <label for="cardNumber">Card Number</label>
+              <input type="number" id="cardNumber" name="cardNumber" placeholder="**** **** **** ****" required>
+          </div>
+          <div class="form-group">
+              <label for="expiryDate">Expiry Date</label>
+              <input type="number" id="expiryDate" name="expiryDate" placeholder="MM / YY" required>
+          </div>
+          <div class="form-group">
+              <label for="cvc">CVC / CVV</label>
+              <input type="number" id="cvc" name="cvc" placeholder="123" required>
+          </div>
+          <div class="form-group">
+              <label for="nameOnCard">Name on Card</label>
+              <input type="text" id="nameOnCard" name="nameOnCard" placeholder="John Doe" required>
+          </div>
+       <a href="confirmation.html">
+    <button class="paymentButton" type="button" x-on:click="gotoPayment">
+        Pay <span x-text="'$' + TotalPayable"></span>
+    </button>
+</a>
+
+        
+
+        
+
+      </form>
+  </div>
+  <div class="summary table" x-data="checkout">
+    <h2>Order Summary</h2>
+    <Table class="table1">
+        <tr>
+            <td>Name</td>
+            <td>
+                <div x-text="SavedName">
+            </td>
+
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td><div x-text="SavedDate"></td>
+        </tr>
+        <tr>
+            <td>Selected Times</td>
+            <td>
+                <template x-for="timeIndex in SavedTimeslot">
+                    <div x-text="openTimes[timeIndex].title"></div>
+                </template>
+            </td>
+        </tr>
+        <tr>
+            <td>Duration</td>
+            <td x-text="TotalDuration + ' Hrs' "></td>
+        </tr>
+        <tr>
+            <td>Mobile</td>
+            <td>
+                <div x-text="SavedMobile">
+            </td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td x-text="SavedEmail"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td x-text="SavedGender"></td>
+        </tr>
+        <tr class="tablehead1">
+            <td>Tickets</td>
+            <td>Charges</td>
+        </tr>
+        <template x-for="guestIndex in ticketTypes">
+            <tr>   
+                <td><div x-text="guestIndex.name"></div></td>
+                <td><div x-text="'$'+guestIndex.total"></div></td>  
+            </tr>
+        </template>
+        <tr>
+            <td>Total Payable</td>
+            <td x-text="'$'+TotalPayable"></td>
+        </tr>
+    </Table>
+ </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,347 @@
+
+body {
+  background-image: url(Turtle-hachery-website/src/assets/images/pexels-jess-loiterton-5007436.jpg); 
+   background-size: cover; 
+  background-repeat: no-repeat;
+
+  }
+  nav {
+  
+     top: 0;
+     left: 0;
+     width: 100%;
+     background-color: rgba(167, 175, 184, 0.3);
+     height: 30%;
+     padding-top: 50px;
+     padding-bottom: 50px;
+     margin-bottom: 15px;
+  }
+  
+  nav ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     position: relative;
+     top: 20%;
+  }
+  
+  nav ul li {
+     margin: 10px;
+  }
+  
+  nav ul li:last-child {
+     margin-right: 0;
+  }
+  
+  nav ul li a {
+     text-decoration: none;
+     color: #fff;
+     font-size: 20px;
+  }
+  
+  nav ul li a:hover {
+     text-decoration: none;
+     color: #fff;
+     font-size: 18px;
+     opacity: 50%;
+  }
+  
+  nav h3{
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10%;
+  }
+  .mainContent{
+     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+ 
+  
+  .container {
+    width: 500px;
+     background-color: #d1dae0;
+     padding: 20px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     border-radius: 5px;
+     opacity: 0.9; 
+  height: 40%; 
+  margin-bottom: 15px;  
+    
+  }
+  
+  .calender {
+     text-align: center;
+     background-color: #fff;
+     border-radius: 10px;
+     padding: 30px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     margin-top: 5px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+     nav {
+         position: relative;
+         height: auto;
+     }
+  
+     nav ul {
+         flex-direction: column;
+         align-items: center;
+     }
+  
+     nav ul li {
+         margin: 10px 0;
+     }
+  
+     
+  }
+  label{
+     font-size: 18px;
+     color: black;
+     margin-right: 10px;
+     font-family: Arial, sans-serif;
+   }
+   input{
+     font-size: 18px;
+     padding: 8px;
+     transition: border-color 0.3s ease-in-out;
+     border: 3px solid #101011;
+     border-radius: 5px;
+     outline: none;
+     background-color:white;
+     color: black;
+     
+   }
+   input:hover,
+   input:focus {
+      border-color: rgb(35, 143, 143);
+      
+
+   }
+   .show-hide-button{
+     border-radius: 5px;
+     background-color:white;
+     padding: 10px;
+   }
+   .counter-button button{
+     border-radius: 5px;
+   }
+   .summary {
+      width: 400px;
+     background-color: #f9f9f9;
+     padding: 50px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     border-radius: 5px;
+     font-family: Arial, sans-serif;
+     opacity: 0.9; 
+  }
+  
+  .summary h2 {
+     font-size: 24px;
+     margin-bottom: 20px;
+     color: #333;
+     display: flex;
+     flex-direction: column;
+  }
+  
+  .table1 {
+     width: 100%;
+     border-collapse: collapse;
+  }
+  
+  .table1 tr:not(:last-child) {
+     border-bottom: 1px solid #ddd;
+  }
+  
+  .table1 td {
+     padding: 10px;
+     text-align: left;
+  }
+  
+  .table1 td:first-child {
+     font-weight: bold;
+     color: #333;
+  }
+  
+  .tablehead1 {
+     background-color: #f2f2f2;
+     font-weight: bold;
+  }
+  
+  
+  
+   /* CSS for the Time Slots */
+  .time-slots-container {
+     text-align: center;
+     margin-top: 30px;
+   }
+   
+   .show-hide-button {
+     background-color: #f7f9fb;
+     color: black;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 16px;
+     transition: background-color 0.3s ease-in-out;
+   }
+   
+   .show-hide-button:hover {
+     background-color: grey;
+   }
+   
+   .time-slots-list {
+     list-style: none;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 10px;
+     margin-top: 10px;
+   }
+   
+   .time-slot {
+     padding: 10px 20px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     cursor: pointer;
+     background-color: #f9f9f9;
+     color: #333;
+     font-size: 16px;
+     transition: background-color 0.3s ease-in-out;
+   }
+   
+   .time-slot.is-peak {
+     background-color: #dce7f3;
+     color: #fff;
+   }
+   
+   .time-slot:hover {
+     background-color: #e6e6e6;
+   }
+   /* CSS for the Ticket Type */
+  .ticket-type-container {
+     margin-top: 20px;
+   }
+   
+   .ticket-type-item {
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     padding: 10px;
+     margin: 10px 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+   
+   .ticket-type-label {
+     font-size: 16px;
+   }
+   
+   .counter-button {
+     display: flex;
+     align-items: center;
+   }
+   
+   .counter-button button {
+     background-color: #ADD8E6;
+     color: #fff;
+     border: none;
+     border-radius: 50%;
+     width: 25px;
+     height: 25px;
+     font-size: 18px;
+     cursor: pointer;
+     margin: 0 5px;
+   }
+   
+   .counter-button input {
+     width: 40px;
+     text-align: center;
+     font-size: 16px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     padding: 5px;
+   }
+   #goto-button{
+     padding: 10px;
+     border: none;
+  
+     border-radius: 5px;
+   }
+   #goto-button:hover{
+     background-color: #e6e6e6;
+   }
+   /*table for the pricings*/
+   .charges-table {
+     max-width: 500px;
+     margin: 50px auto;
+     font-family: Arial, sans-serif;
+   }
+   
+   table {
+     width: 100%;
+     border-collapse: collapse;
+     background-color: #f9f9f9;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     border-radius: 5px;
+   }
+   
+   th, td {
+     padding: 10px;
+     text-align: left;
+   }
+   
+   th {
+     background-color: #f2f2f2;
+     font-weight: bold;
+     color: #333;
+   }
+   
+   tr:not(:last-child) {
+     border-bottom: 1px solid #ddd;
+   }
+   
+   tr:nth-child(odd) {
+     background-color: #f7f7f7;
+   }
+   
+   tr:hover {
+     background-color: #e6e6e6;
+   }
+   
+   td:first-child {
+     font-weight: bold;
+   }
+   .continuePurchaseButton{
+    width: 60%;
+padding: 8px;
+background-color: #a3bac9;
+color: #ffffff;
+border: none;
+border-radius: 6px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.2s ease-in-out;
+   }
+   .continuePurchaseButton:hover{
+    background-color: #2980b9;
+
+   }
+   /* Responsive styles */
+   @media only screen and (max-width: 600px) {
+     .charges-table {
+       max-width: 90%;
+     }
+   }
+   
+   
